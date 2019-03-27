@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
 composer create-project laravel/laravel application
-cp application/* . -R
-cp application/.* .
-rm application -R
+cp application/* . -R && cp application/.* . && rm application -R
+chown www-data:www-data storage/ -R

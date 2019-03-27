@@ -19,7 +19,7 @@ Após criar a imagem, execute o comando abaixo para criar e executar o container
 docker run --detach --publish 80:80 --volume `pwd`:/var/www/:rw --name app image
 ``` 
 
-Execute o comando abaixo para ter acesso ao terminal interativo
+Execute o comando abaixo para ter acesso ao terminal interativo.
 
 ``` 
 docker exec -it app /bin/bash
@@ -32,8 +32,9 @@ root@CONTAINER ID:/var/www# ./build
 
 ```
 
+Para ver o IP do container pelo host atual execute o código abaixo.
 
-IP: docker inspect app | grep IPAddress
-Acesso: docker exec -it app bash
-Stop: docker stop app
-Remove: docker rm app
+```
+docker inspect app | grep IPAddress
+
+```
