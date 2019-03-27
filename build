@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+composer create-project laravel/laravel application
+cp application/* . -R
+cp application/.* .
+rm application -R
